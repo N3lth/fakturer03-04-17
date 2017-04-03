@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+        <script src="libs/jquery/jquery.js"></script>
+        <script src="libs/jquery/jquery.dataTables.js"></script>
+        <script src="modules/common/constants.js"></script>
+        <script src="modules/common/jquery-services.js"></script>
+        <script src="modules/common/rest-connector.js"></script>
+        <script src="modules/test/rest-test/rest-test.js"></script>
+        <script src="modules/test/rest-test/crud.js"></script>
+        <script src="modules/test/db-test/db-test.js"></script>
+
+        <link rel="stylesheet" href="styles/styles.css" />
+    </head>
+
+    <body>
+        <span id="menu" style="display:inline-flex;width:1000px">
+            <div style="padding:5px">
+                <button onclick="switchMenu('modules/app/app-submenu.html');
+                                 switchTab('modules/app/blank.html')">APP</button>
+            </div>
+            <div style="padding:5px">
+                <button onclick="switchMenu('modules/test/test-submenu.html')
+                                 switchTab('modules/test/rest-test/rest-test.html')">TEST</button>
+            </div>
+        </span>
+        <span id="submenu" style="display:inline-flex;width:1000px"></span>
+        <hr>
+        <div id="content"></div>
+
+        <script>
+            switchMenu('modules/test/test-submenu.html');
+            switchTab('modules/test/rest-test/rest-test.html');
+        </script>
+    </body>
+</html>

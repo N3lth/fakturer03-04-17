@@ -1,0 +1,39 @@
+<h2>CRUD - create, read, update, delete</h2>
+<h4>Na przykładzie podstawowego zarządzania użytkownikami</h4>
+<br>
+<h3>Formularz tworzenia/updatu</h3>
+
+<span>Id: <input id="user-id" type="text" style="width:50px"></span>
+<br>
+<span>Imię: <input id="user-name" type="text" style="width:200px"></span>
+<br>
+<span>Nazwisko: <input id="user-lastname" type="text" style="width:200px"></span>
+<br>
+<span>Login: <input id="user-login" type="text" style="width:200px"></span>
+<br>
+<span>Hasło: <input id="user-password" type="text" style="width:200px"></span>
+<br>
+<span>Email: <input id="user-email" type="text" style="width:200px"></span>
+
+<br>
+<br>
+
+<button onclick="saveUserForm()">Zapisz</button>&nbsp;&nbsp;&nbsp;
+<button onclick="clearUserForm()">Wyczyść formularz</button>&nbsp;&nbsp;&nbsp;
+<button onclick="deleteSelectedUser()">Usuń</button>
+
+<hr>
+<h3>Lista dostępnych danych</h3>
+
+<button onclick="getUserDataForTable()">Odśwież</button>
+<br>
+<br>
+
+<table id="user-table" class="display" width="100%"></table>
+
+
+<script>
+    createUserTable();
+    createUserTableEvents();
+    getUserDataForTable();
+</script>
